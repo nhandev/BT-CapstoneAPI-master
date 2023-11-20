@@ -1,0 +1,116 @@
+#header_bg {
+   background-color: $color-black;
+}
+
+.carousel {
+   margin-bottom: 30px;
+   background-position: center;
+   padding-top: 100px;
+   padding-bottom: 50px;
+
+   .title {
+      margin-left: 200px;
+   }
+
+   .banner {
+      margin: 0 auto;
+      img {
+         max-width: 100%;
+         height: auto;
+         width: 400px;
+      }
+   }
+
+   .container {
+      align-items: center;
+   }
+}
+
+.products {
+   background-color: $color-black;
+   padding-bottom: 50px;
+   margin: 70px 0 0;
+   transition: all 0.5s;
+
+   .row{
+      @include responsive(small){
+         justify-content: center;
+      }
+      @include responsive(extra-large){
+         justify-content: flex-start;
+      }
+   }
+   .title {
+      h1 {
+         margin: 0;
+      }
+      padding-top: 80px;
+      text-align: center;
+      color: $color-white;
+   }
+
+   .card {
+      margin: 20px 0;
+      width: 300px;
+      height: auto;
+      padding: 30px 10px;
+      border-radius: 9px;
+      background-color: $color-black1;
+      transition: box-shadow 0.7s;
+
+      &:hover {
+         box-shadow: rgba(252, 215, 215, 0.2) 0px 4px 10px 3px;
+      }
+
+      h3 {
+         font-size: 20px;
+      }
+   }
+
+   .card__top {
+      text-align: center;
+      img {
+         max-width: 100%;
+         height: auto;
+         width: 80%;
+         border-radius: 9px;
+      }
+   }
+   .card__body {
+      text-align: center;
+      padding-top: 5px;
+      color: $color-white;
+      button {
+         background-color: $color-black;
+         color: $color-white;
+         width: 85px;
+         border-radius: 3px;
+         padding: 3px 0px;
+         outline: 0;
+         border: 1px solid $color-black;
+         margin: 0 3px;
+
+         &#detail {
+            transition: 0.3s all;
+         }
+
+         &#add {
+            transition: 0.3s all;
+         }
+
+         &:hover {
+            &#detail {
+               background-color: #fff;
+               border: 1px solid #fff;
+               color: $color-black;
+            }
+
+            &#add {
+               background-color: aquamarine;
+               border: 1px solid aquamarine;
+               color: $color-black;
+            }
+         }
+      }
+   }
+}
